@@ -8,7 +8,7 @@ public class Main {
         Scanner in = new Scanner(System.in);
         System.out.print("Enter an integer: ");
 
-        int n = in.nextInt();
+        int n = Integer.parseInt( in.next());
         System.out.println("you entered " + n);
         if (n % 2 == 0) {
             System.out.println("even");
@@ -19,16 +19,26 @@ public class Main {
         for (int i =0 ; i < n ; i++) {
             System.out.println(i);
         }
+
+
+
+
         runner();
     }
     public static void runner(){
-        while (true){
-        Scanner in = new Scanner(System.in);
-        System.out.println("Do you want to leave? (y/n): ");
-        if (in.next().equals("y")){
-            break;
-        }
-        System.out.println("you did not say y");
+        while (true) {
+            try {
+                Scanner in = new Scanner(System.in);
+                System.out.println("Guess a number ");
+
+                if (Integer.parseInt(in.next()) == 10) {
+                    System.out.println("Correct!");
+                    break;
+                }
+                System.out.println("Wrong guess");
+            }catch (NumberFormatException exception){
+                System.out.println("that was not a number!!!");
+            }
         }
     }
 }
