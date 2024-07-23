@@ -3,12 +3,13 @@ package org.example.day46;
 public class Main {
     public static void main(String[] args) {
         int num = 1;
-        double dec=1.0;
+        double dec = 2.6;
         String name = "Chris";
 
         System.out.println("Hello world!");
 
         int sum = add(num, (int)dec);
+        System.out.println(sum);
 
     }
 
