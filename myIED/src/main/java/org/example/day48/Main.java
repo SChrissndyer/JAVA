@@ -2,27 +2,43 @@ package org.example.day48;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.stream.Stream;
 
 public class Main {
-    public static void main(String[] args) {
-        // this will print the location in memory the pointer
-        int[] unList = new int[4];
-        System.out.println(unList);
-        int[] intList={1,2,3,4};
-        System.out.println(intList);
-        String[] stringList={"a","B","C"};
-        //how to use the Arrays method forEach to print
-        Arrays.asList(stringList).forEach(System.out::println);
-        System.out.println(" ");
-        doArrayNoType();
-        doArrayType();
+//    public static void main(String[] args) {
+//        // this will print the location in memory the pointer
+//        int[] unList = new int[4];
+//        System.out.println(unList);
+//        int[] intList={1,2,3,4};
+//        int[] intList22={1,2,3,4};
+//
+//
+//        System.out.println(intList);
+//        String[] stringList={"a","B","C"};
+//        //how to use the Arrays method forEach to print
+//        Arrays.asList(stringList).forEach(System.out::println);
+//        System.out.println(" ");
+//        doArrayNoType();
+//        doArrayType();
+//
+//        System.out.println("5+5 = "+add(5,5));
+//        System.out.println("5*5 = "+multiply(5,5));
+//        System.out.println("5/10 = "+divide(5,10));
+//    }
 
-        System.out.println("5+5 = "+add(5,5));
-        System.out.println("5*5 = "+multiply(5,5));
-        System.out.println("5/10 = "+divide(5,10));
+
+    public static void printMany(String ...elements) {
+        Arrays.stream(elements).forEach(System.out::println);
     }
 
-    public static void doArrayNoType(){
+    public static void main(String[] args) {
+        printMany("one", "two", "three");
+        printMany(new String[]{"one", "two", "three"});
+        printMany(Stream.of("one", "two", "three").toArray(String[]::new));
+        printMany(Arrays.asList(1, "bar", "baz").toArray(new String[3]));
+    }
+
+    public static ArrayList doArrayNoType(){
         //non typed
         ArrayList lists= new ArrayList<>();
         lists.add('a');
@@ -34,6 +50,7 @@ public class Main {
             System.out.println(lists.get(i));
         }
         System.out.println(" ");
+        return lists;
     }
     public static void doArrayType(){
         //typed
