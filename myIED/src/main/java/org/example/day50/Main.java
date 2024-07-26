@@ -21,6 +21,9 @@ public class Main {
         myPeople.add(per3);
         myPeople.add(per4);
 
+
+
+
         for( Person  person:myPeople){
             System.out.println(person.toString());
         }
