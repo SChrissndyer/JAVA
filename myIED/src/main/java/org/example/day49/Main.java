@@ -20,7 +20,9 @@ public class Main {
        // Abstract
         Pig myPig = new Pig(); // Create a Pig object
         myPig.animalSound();
+        Cat myCat= new Cat("vex");
         myPig.sleep();
+        myCat.animalSound();
 
 
     }
