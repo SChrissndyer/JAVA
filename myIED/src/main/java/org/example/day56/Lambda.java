@@ -7,8 +7,21 @@ import java.util.stream.Collectors;
 public class Lambda {
 
     public static void main(String[] args){
-        LambdaExample();
+       /* LambdaExample();
         LambdaRunnableExample();
+        LambdaForEachExample();
+        LambdaStreamExample();
+        LambdaMapExample();*/
+        sub();
+
+    }
+
+    public static void sub () {
+        String a= "My word is good";
+        String b=a.substring(a.length()-1);
+
+        System.out.println(a);
+        System.out.println(b);
 
     }
     public static void LambdaExample () {
