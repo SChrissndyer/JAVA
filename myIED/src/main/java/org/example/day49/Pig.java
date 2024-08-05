@@ -2,8 +2,8 @@ package org.example.day49;
 
 public class Pig extends Animal{
 
-    public Pig(String name){
-        super(name);
+    public Pig(){
+
     }
     public void animalSound() {
         // The body of animalSound() is provided here
@@ -13,4 +13,6 @@ public class Pig extends Animal{
     public void sleep(int a){
 
     }
+
+
 }

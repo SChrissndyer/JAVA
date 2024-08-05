@@ -18,9 +18,9 @@ public class Main {
         bob.yell();
         System.out.println();
        // Abstract
-        Pig myPig = new Pig("nill"); // Create a Pig object
+        Pig myPig = new Pig(); // Create a Pig object
         myPig.animalSound();
-        Cat myCat= new Cat("vex");
+        Cat myCat= new Cat();
         myPig.sleep();
         myCat.animalSound();
 

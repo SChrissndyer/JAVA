@@ -3,9 +3,7 @@ package org.example.day49;
 abstract class Animal {
     // Abstract method (does not have a body)
     private String name;
-    public Animal(String name){
-        this.name = name;
-    }
+
     public abstract void animalSound();
     // Regular method
     public void sleep() {

@@ -1,10 +1,8 @@
 package org.example.day49;
 
-public class Cat extends Animal{
+public class Cat{
     private String name;
-    public Cat(String name){
-        this.name= name;
-    }
+
 
 
     public void animalSound() {
