@@ -6,6 +6,8 @@ import java.util.regex.Pattern;
 public class RegexExample {
 
     public static void main(String[] args){
+        loops();
+        loops2();
         RegexExample();
         EmailValidation();
         ExtractNumbers();
@@ -116,5 +118,33 @@ public class RegexExample {
         System.out.println("Formatted Phone Number: " + result);
     }
 
-}
+    public  static void loops(){
+
+        for(int i =0; i<20; i++){
+
+        }
+    }
+
+    public  static void loops2(){
+        String input = "abc def ghij";
+
+        // Define the regex pattern to format the phone number
+        String phoneRegex = "^[abc ]";
+
+        // Create a Pattern object
+        Pattern pattern = Pattern.compile(phoneRegex);
+
+        // Create a Matcher object
+        Matcher matcher = pattern.matcher(input);
+
+
+        // Print the formatted phone number
+        int counter =0;
+        while(matcher.find()){
+            counter++;
+        }
+        System.out.println(counter);
+    }
+    }
+
 
