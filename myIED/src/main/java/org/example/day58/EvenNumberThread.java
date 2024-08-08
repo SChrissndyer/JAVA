@@ -12,7 +12,7 @@ class EvenNumberThread extends Thread {
         for (int i = 0; i <= 10; i += 2) {
             printer.printEven(i);
             try {
-                Thread.sleep(500); // Sleep for 0.5 second
+                Thread.sleep(2000); // Sleep for 0.5 second
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
@@ -32,7 +32,7 @@ class OddNumberThread extends Thread {
         for (int i = 1; i <= 10; i += 2) {
             printer.printOdd(i);
             try {
-                Thread.sleep(500); // Sleep for 0.5 second
+                Thread.sleep(2000); // Sleep for 0.5 second
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }

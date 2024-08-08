@@ -6,9 +6,8 @@ public class ConcurrencyDemo {
 
         Thread evenThread = new EvenNumberThread(printer);
         Thread oddThread = new OddNumberThread(printer);
-
-        evenThread.start();
         oddThread.start();
+        evenThread.start();
 
         try {
             evenThread.join();
