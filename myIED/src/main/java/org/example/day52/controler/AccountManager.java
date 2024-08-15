@@ -11,6 +11,10 @@ public class AccountManager<T extends BankAccount> {
     private List<T> accounts = new ArrayList<>();
     private Scanner scanner = new Scanner(System.in);
 
+    public AccountManager(Scanner scanner) {
+        this.scanner = scanner;
+    }
+
     public void run() {
         boolean exit = false;
 
