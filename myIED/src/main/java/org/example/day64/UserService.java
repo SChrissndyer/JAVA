@@ -3,9 +3,11 @@ package org.example.day64;
 public class UserService {
 
     private UserRepository userRepository;
+    private UserRepository userRepository2;
 
-    public UserService(UserRepository userRepository) {
+    public UserService(UserRepository userRepository, UserRepository userRepository2) {
         this.userRepository = userRepository;
+        this.userRepository2=userRepository2;
     }
 
     public String getUserFullName(int userId) {

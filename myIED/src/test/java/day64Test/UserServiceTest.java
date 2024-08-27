@@ -16,13 +16,16 @@ public class UserServiceTest {
 
     @Mock
     private UserRepository userRepository;
+    @Mock
+    private UserRepository userRepository2;
+
 
     private UserService userService;
 
     @Before
     public void setUp() {
         MockitoAnnotations.openMocks(this);
-        userService = new UserService(userRepository);
+        userService = new UserService(userRepository,userRepository2);
     }
 
     @Test
