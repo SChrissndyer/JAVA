@@ -34,7 +34,7 @@ public class DataBaseConnector {
                 System.out.println(rs.getString("MenuItemID") + "\t" +
                         rs.getString("ItemName") + "\t" +
                         rs.getDouble("Price")  + "\t" +
-                        rs.getDouble("Category"));
+                        rs.getString("Category"));
             }
         } catch (SQLException e) {
             System.out.println("Error executing SELECT statement");
