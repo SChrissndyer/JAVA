@@ -73,9 +73,9 @@ public class AuthController {
 		return new ResponseEntity<>(responseDto, HttpStatus.OK);
 	}
 	
-	@PostMapping("api/v1/teacherLogin")
+	@PostMapping("api/v1/userLogin")
 	public ResponseEntity<UserLoginResponseDto> userLogin(@RequestBody UserLoginDto userLoginDto) {
-		System.out.println("teacherLogin");
+		System.out.println("userLogin");
 		customUserDetailsService.setUserType(UserType.USER);
 		Authentication authentication = authenticationManager.authenticate(
 				new UsernamePasswordAuthenticationToken(userLoginDto.getEmail(), userLoginDto.getPassword()));

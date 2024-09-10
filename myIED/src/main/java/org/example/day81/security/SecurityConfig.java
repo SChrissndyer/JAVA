@@ -39,7 +39,7 @@ public class SecurityConfig {
 			.requestMatchers("/api/public/**").hasAuthority(UserType.USER.toString())
 			.requestMatchers("/api/v1/adminRegister").permitAll()
 			.requestMatchers("/api/v1/adminLogin").permitAll()
-			.requestMatchers("/api/v1/teacherLogin").permitAll()
+			.requestMatchers("/api/v1/userLogin").permitAll()
 			.requestMatchers("/api/v1/admin/**").hasAuthority(UserType.ADMIN.toString())
 			.anyRequest().authenticated()
 			.and()
